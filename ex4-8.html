@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>form 필터 선택자</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {            
+            $("input:text").css("background","red");
+            $("input:password").css("background","orange");
+            $(":button").css("background","yellow");           
+            $("input:checkbox + label").css("background","green");
+            $("option:selected").css("background","blue");
+            $("textarea:disabled").css("background","pink");
+            $("textarea:enabled").css("background","yellow");
+        });
+    </script>
+    <style>
+        * {font-size: 20pt; margin-left: 5px;}
+    </style>   
+</head>
+<body>
+    <div><input type="text"></div>
+    <div><input type="password"></div>
+    <div><button>확인</button></div>
+    <div><input type="checkbox" id="css"><label for="css">css</label>
+         <input type="checkbox" id="js"><label for="js">js</label>
+    </div>
+    <div>
+        <select>
+            <option>과목선택</option>
+            <option>javascript</option>
+            <option selected>jQuery</option>
+            <option>css</option>
+            <option>bootstrap</option>
+
+        </select><br>
+        <textarea cols="20" rows="5" disabled="disabled">서비스 개봉 후 1년</textarea>
+    </div>
+</body>
+</html> 

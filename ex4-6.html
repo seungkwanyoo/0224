@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자식 필터 선택자</title>
+    <style>
+        span {
+            margin: 5px;
+            display: inline-block;
+            font-size: 20pt;
+            margin: 5px;
+        }
+       
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //.css("border", "2px solid red");
+            $('#m1>span:first-child').css("border", "2px solid red");
+            $('#m1>span:last-child').css("border", "2px solid red");
+
+            $('#m2>span:first-of-type').css("border", "2px solid pink");
+            $('#m2>span:last-of-type').css("border", "2px solid pink");
+
+            $('#m3 > span:nth-child(1)').css("border", "2px solid green");
+            $('#m3 > span:nth-last-child(1)').css("border", "2px solid green");
+
+            $('#m4 > span:nth-of-type(1)').css("border", "2px solid pink");
+            $('#m4 > span:nth-last-of-type(1)').css("border", "2px solid pink");
+
+            $('#m5 > span:only-child').css("border", "2px solid blue");
+            $('#m6 > span:only-of-type').css("border", "2px solid blue");
+            
+        });
+    </script>
+</head>
+<body>
+    <h2>ex4-6 455페이지 자식필터 child. nth</h2>
+    <div id="m1">
+        <span>내용1_1</span>
+        <span>내용1_2</span>
+        <span>내용1_3</span>
+    </div>
+    <div id="m2">
+        <strong>내용2_1 strong</strong>
+        <span>내용2_2</span>
+        <strong>내용2_3 strong</strong>
+        <span>내용2_4 span</span>
+    </div>
+    <div id="m3">
+        <span>내용3_1span</span>
+        <span>내용3_2span</span>
+        <span>내용3_3span</span>
+    </div>
+    <div id="m4">
+        <strong>내용4_1</strong>
+        <span>내용4_2</span>
+        <strong>내용4_3</strong>
+        <span>내용4_4</span>
+        <strong>내용4_5</strong>
+        <span>내용4_6</span>
+    </div>
+    <div id="m5">
+        <span>내용5_1</span>
+    </div>
+    <div id="m6">
+        <strong>내용6_1</strong>
+        <span>내용6_2</span>
+    </div>
+</body>
+</html> 

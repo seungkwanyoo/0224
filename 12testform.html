@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+<style> *{font-size: 16pt;} </style>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>    
+  function myAAA(){
+    var a = document.getElementById("numa").value; //id존재
+      // var a = $("#numa").val();
+    alert(a);
+  }//end 
+  
+
+$(function(){
+  $('#btn2').click(function(){
+    // var b = document.myform.numb.value; //<form name=myform> <input name=numb>
+    var b = $("#numb").val();
+    alert(b);
+  });//end 
+
+  $('#btn3').on('click', function(){
+    // var c = document.getElementById("numc").value;
+    var c = $("#numc").val(); //id존재 jQuery방식으로 접근
+    alert(c);
+  });//end
+});      
+</script>
+
+</head>
+<body>
+    <H2>12testform.html</H2>
+ <form name="myform">
+    코드a: <input type="text" name="numa" id="numa" value="유승관유승관"> <br>
+    코드b: <input type="text" name="numb" id="numb" value="월요일월요일"> <br>
+    코드c: <input type="text" name="numc" id="numc" value="수요일삼일절"> <br>
+    <input type="button" onclick="myAAA()" id="btn1" value="myAAA함수">
+    <input type="button" onclick="myBBB()" id="btn2" value="myBBB함수">
+    <input type="button" onclick="myCCC()" id="btn3" value="myCCC함수">
+    <input type="button" onclick="location.reload();" value="재실행">
+ </form>
+</body>
+</html>
